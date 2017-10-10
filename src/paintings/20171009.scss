@@ -1,0 +1,92 @@
+$baseColor: rgb(10, 40, 90);
+
+#rect1 {
+  z-index: 1;
+}
+#rect2 {
+  z-index: 2;
+}
+#rect3 {
+  z-index: 3;
+}
+#rect4 {
+  z-index: 5;
+}
+#circle1 {
+  z-index: 4;
+}
+#circle2 {
+  z-index: 6;
+}
+
+.frame {
+  width: 550px;
+  height: 600px;
+  margin: 50px auto;
+  background-color: $baseColor;
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
+  background: linear-gradient($baseColor, darkgoldenrod);
+}
+.info {
+  width: 550px;
+  margin: 30px auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  line-height: 0.5em;
+  // display: none;
+}
+.rect {
+  position: absolute;
+}
+.rect#rect1 {
+  margin-left: 50px;
+  width: 10px;
+  height: 600px;
+  background-color: rgb(50, 10, 5);
+}
+.rect#rect2 {
+  margin-left: 50px;
+  height: 600px;
+  width: 450px;
+  border-right: 5px solid lightblue;
+  background-color: rgba(0, 50, 200, 0.7);
+}
+.rect#rect3 {
+  margin-left: 330px;
+  height: 500px;
+  width: 25px;
+  background-color: rgba(190, 20, 5, 0.7);
+  transform: skew(-30deg);
+}
+.rect#rect4 {
+  margin-top: 250px;
+  margin-left: 125px;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(honeydew, lawngreen);
+  opacity: 0.5;
+  box-shadow: 10px 10px 0 palevioletred;
+  transition: all 1s ease;
+}
+.rect#rect4:hover {
+  transform: translateY(-100px) rotate(180deg);
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+.circle#circle1 {
+  margin-top: 150px;
+  margin-left: 250px;
+  width: 50px;
+  height: 50px;
+  background-color: orangered;
+}
+.circle#circle2 {
+  margin-top: 400px;
+  margin-left: 250px;
+  width: 50px;
+  height: 50px;
+  background-color: orangered;
+}
