@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 
-import Painting from './components/Painting';
+import Header from './components/Header';
+import P20171009 from './paintings/20171009/P20171009';
 
 class App extends Component {
   render() {
-    const username = 'alightedlamp';
     return (
       <div className="App">
-        <header className="header">
-          <h1 className="title">CSS ART CLUB</h1>
-        </header>
-        <section className="main-content">
-          <Painting />
+        <Header />
+        <section
+          style={{
+            marginTop: '150px'
+          }}
+        >
+          <P20171009 />
         </section>
       </div>
     );
