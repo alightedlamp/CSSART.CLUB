@@ -1,0 +1,27 @@
+* {
+  box-sizing: boder-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  display: block;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 8em;
+  margin: -75px 0 0 0;
+  color: #eee;
+}
+.letter {
+  display: inline-block;
+  height: 250px;
+}
+
+@for $i from 1 through 15 {
+  #letter-#{$i}:hover {
+    color: hsl($i * 12, 95, 60);
+    transform: translateY(75px);
+  }
+}
