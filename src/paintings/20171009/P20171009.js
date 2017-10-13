@@ -4,7 +4,7 @@ import './20171009.css';
 class p20171009 extends Component {
   render() {
     return (
-      <div>
+      <div id="P20171009">
         <div className="frame">
           <div className="rect" id="rect1" />
           <div className="rect" id="rect2" />
@@ -15,8 +15,9 @@ class p20171009 extends Component {
         </div>
 
         <div className="info">
-          <p>CSS Painting #1</p>
-          <p>2017/10/09</p>
+          <p>
+            CSS Painting #1<br />2017/10/09
+          </p>
         </div>
       </div>
     );

@@ -1,25 +1,25 @@
 $baseColor: rgb(10, 40, 90);
 
-#rect1 {
+#P20171009 #rect1 {
   z-index: 1;
 }
-#rect2 {
+#P20171009 #rect2 {
   z-index: 2;
 }
-#rect3 {
+#P20171009 #rect3 {
   z-index: 3;
 }
-#rect4 {
+#P20171009 #rect4 {
   z-index: 5;
 }
-#circle1 {
+#P20171009 #circle1 {
   z-index: 4;
 }
-#circle2 {
+#P20171009 #circle2 {
   z-index: 6;
 }
 
-.frame {
+#P20171009 .frame {
   width: 550px;
   height: 600px;
   margin: 50px auto;
@@ -27,37 +27,36 @@ $baseColor: rgb(10, 40, 90);
   box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
   background: linear-gradient($baseColor, darkgoldenrod);
 }
-.info {
+#P20171009 .info {
   width: 550px;
   margin: 30px auto;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
-  line-height: 0.5em;
 }
-.rect {
+#P20171009 .rect {
   position: absolute;
 }
-.rect#rect1 {
+#P20171009 .rect#rect1 {
   margin-left: 50px;
   width: 10px;
   height: 600px;
   background-color: rgb(50, 10, 5);
 }
-.rect#rect2 {
+#P20171009 .rect#rect2 {
   margin-left: 50px;
   height: 600px;
   width: 450px;
   border-right: 5px solid lightblue;
   background-color: rgba(0, 50, 200, 0.7);
 }
-.rect#rect3 {
+#P20171009 .rect#rect3 {
   margin-left: 330px;
   height: 500px;
   width: 25px;
   background-color: rgba(190, 20, 5, 0.7);
   transform: skew(-30deg);
 }
-.rect#rect4 {
+#P20171009 .rect#rect4 {
   margin-top: 250px;
   margin-left: 125px;
   width: 300px;
@@ -67,22 +66,22 @@ $baseColor: rgb(10, 40, 90);
   box-shadow: 10px 10px 0 palevioletred;
   transition: all 1s ease;
 }
-.rect#rect4:hover {
+#P20171009 .rect#rect4:hover {
   transform: translateY(-100px) rotate(180deg);
 }
 
-.circle {
+#P20171009 .circle {
   position: absolute;
   border-radius: 50%;
 }
-.circle#circle1 {
+#P20171009 .circle#circle1 {
   margin-top: 150px;
   margin-left: 250px;
   width: 50px;
   height: 50px;
   background-color: orangered;
 }
-.circle#circle2 {
+#P20171009 .circle#circle2 {
   margin-top: 400px;
   margin-left: 250px;
   width: 50px;

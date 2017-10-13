@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 // Paintings
 import P20171009 from './paintings/20171009/P20171009';
+import P20171010 from './paintings/20171010/P20171010';
 
 class App extends Component {
   render() {
@@ -14,8 +15,9 @@ class App extends Component {
         <Header />
         <section>
           <P20171009 />
+          <P20171010 />
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }
