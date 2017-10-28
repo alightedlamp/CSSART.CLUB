@@ -91,10 +91,10 @@ $secondaryColor: rgb(70, 10, 90);
   transition: 2s;
 }
 @for $i from 1 through 10 {
-  #02171010 .stripe#stripe#{$i} {
+  #P20171010 .stripe#stripe#{$i} {
     margin-left: 275px - $i * 25;
   }
-  #20171010 .stripe#stripe#{$i}:hover {
+  #P20171010 .stripe#stripe#{$i}:hover {
     transform: rotate(180deg);
   }
 }
