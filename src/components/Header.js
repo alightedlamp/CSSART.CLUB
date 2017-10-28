@@ -15,6 +15,7 @@ class Header extends Component {
             <div className="letter" id="letter-3">
               S
             </div>
+            <div className="spacer" />
             <div className="letter" id="letter-4">
               A
             </div>
@@ -24,21 +25,7 @@ class Header extends Component {
             <div className="letter" id="letter-6">
               T
             </div>
-            <div className="letter" id="letter-7">
-              (
-            </div>
-            <div className="letter" id="letter-8">
-              D
-            </div>
-            <div className="letter" id="letter-9">
-              O
-            </div>
-            <div className="letter" id="letter-10">
-              T
-            </div>
-            <div className="letter" id="letter-11">
-              )
-            </div>
+            <div className="spacer" />
             <div className="letter" id="letter-12">
               C
             </div>
