@@ -22,10 +22,7 @@ class P20171010 extends Component {
           <div className="stripe" id="stripe9" />
         </div>
         <div className="info">
-          <p>
-            CSSAC#2<br />
-            2017/10/10
-          </p>
+          <p>2017/10/10</p>
         </div>
       </div>
     );
