@@ -1,0 +1,180 @@
+$baseColor: rgba(10, 30, 250, 0.5);
+$secondaryColor: rgba(75, 50, 125, 0.3);
+
+$subColorBase: rgba(250, 50, 5, 1);
+$subColorSecondary: rgba(225, 60, 15, 0.3);
+
+$paintingWidth: 365px;
+$paintingHeight: 400px;
+
+#P20171012 {
+  #circle1 {
+    z-index: 11;
+  }
+  #rect10 {
+    z-index: 10;
+  }
+  #rect9 {
+    z-index: 9;
+  }
+
+  .frame {
+    position: relative;
+    margin: 0 auto;
+    width: $paintingWidth;
+    height: $paintingHeight;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  .info {
+    width: $paintingWidth;
+  }
+  .rect,
+  .circle {
+    // position: absolute;
+  }
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .background {
+    position: inherit;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .rect#rect1 {
+      width: 25%;
+      background: linear-gradient($baseColor, $secondaryColor);
+    }
+    .rect#rect2 {
+      width: 65%;
+      background: linear-gradient($subColorBase, $subColorSecondary);
+    }
+    .rect#rect3 {
+      width: 10%;
+      background: linear-gradient(to right, red, yellow);
+    }
+  }
+  .middleground {
+    .circle#circle1 {
+      // left: 92px;
+      // top: 25px;
+      top: 0;
+      width: 92px;
+      height: 60px;
+      background-color: rgba(250, 150, 0, 0.7);
+      transition: 2s;
+      cursor: pointer;
+
+      &:hover {
+        top: 308px;
+        left: 0;
+        width: 92px;
+        height: 92px;
+        background-color: indianred;
+        box-shadow: 1px 1px 0 rgba(256, 0, 0, 1);
+      }
+    }
+    .circle#circle2 {
+      top: 55px;
+      left: 92px;
+      width: 38px;
+      height: 38px;
+      background-color: aquamarine;
+      opacity: 0.9;
+      cursor: pointer;
+
+      &:hover {
+        animation: perimiter 5s infinite;
+      }
+    }
+  }
+  .foreground {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    transform: rotate(90deg);
+
+    $stripe-width: 5px;
+    $stripe-spacer: 10px;
+
+    @for $i from 4 to 8 {
+      .rect#rect#{$i} {
+        position: absolute;
+        left: $stripe-width + ($stripe-spacer * $i);
+        width: $stripe-width;
+        height: 273px;
+        background-color: rgba(250, 5, 5, 0.6);
+        animation: pulse 5s infinite;
+      }
+    }
+    .rect#rect9 {
+      position: absolute;
+      left: 20px;
+      top: 164.5px;
+      width: 366px;
+      height: 35px;
+      background-color: rgba(100, 40, 170, 0.7);
+      transform: skew(35deg) rotate(90deg);
+      transition: 0.5s;
+      cursor: pointer;
+
+      .rect#rect10 {
+        top: 350px;
+        left: 0;
+        width: 75%;
+        height: 35px;
+        background-color: blue;
+      }
+
+      &:hover {
+        left: 14px;
+        width: 363px;
+        height: 36px;
+        transform: skew(45deg) translate(120px, -164.5px);
+
+        #rect11 {
+          background-color: blue;
+        }
+      }
+      .rect#rect11 {
+        // top: 125px;
+        left: 150px;
+        width: 75%;
+        background-color: lavender;
+      }
+    }
+  }
+}
+
+@keyframes perimiter {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 235px;
+  }
+  50% {
+    margin-left: 236px;
+    margin-top: 308px;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}

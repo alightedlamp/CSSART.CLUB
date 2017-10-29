@@ -21,6 +21,7 @@ class P20171010 extends Component {
           <div className="stripe" id="stripe8" />
           <div className="stripe" id="stripe9" />
         </div>
+
         <div className="info">
           <p>2017/10/10</p>
         </div>

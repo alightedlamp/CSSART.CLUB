@@ -1,100 +1,100 @@
 $baseColor: rgb(90, 10, 10);
 $secondaryColor: rgb(70, 10, 90);
 
-#P20171010 #rect1 {
-  z-index: 1;
-}
-#P20171010 .stripe {
-  z-index: 4;
-}
-
-#P20171010 .frame {
-  width: 300px;
-  height: 375px;
-  margin: 50px auto;
-  background-color: $baseColor;
-  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
-  background: linear-gradient($baseColor, $secondaryColor);
-}
-#P20171010 .info {
-  width: 300px;
-  margin: 30px auto;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9em;
-}
-
-#P20171010 .rect,
-#P20171010 .circle,
-#P20171010 .line {
-  position: absolute;
-}
-#P20171010 .circle {
-  border-radius: 50%;
-}
-#P20171010 .circle#circle1 {
-  margin-top: 0;
-  margin-left: 200px;
-  width: 100px;
-  height: 100px;
-  background-color: tomato;
-  transition: 2.5s;
-}
-#P20171010 .circle#circle1:hover {
-  transform: translateX(-105px) translateY(240px);
-  background-color: mediumaquamarine;
-  z-index: 5;
-}
-#P20171010 .rect#rect1 {
-  width: 50px;
-  height: 50px;
-  margin-top: 280px;
-  margin-left: 115px;
-  background-color: rgba(256, 20, 20, 0.5);
-}
-#P20171010 .rect#rect2 {
-  width: 290px;
-  height: 163px;
-  margin-top: 105px;
-  margin-left: 5px;
-  background-color: rgba(10, 90, 256, 0.5);
-  transform: skew(0, 25deg);
-}
-#P20171010 .rect#rect3 {
-  width: 0;
-  height: 0;
-  border-left: 160px solid transparent;
-  border-right: 0px solid transparent;
-  border-bottom: 220px solid rgb(10, 10, 115);
-  margin-top: 130px;
-  margin-left: 100px;
-  transform: rotate(25deg);
-}
-#P20171010 .rect#rect4 {
-  width: 0;
-  height: 0;
-  margin-top: 266px;
-  margin-left: 118px;
-  border-top: 5px solid transparent;
-  border-left: 51px solid rgb(100, 0, 75);
-  border-bottom: 18px solid transparent;
-  transform: rotate(20deg);
-}
-#P20171010 .stripe {
-  position: absolute;
-  width: 5px;
-  height: 275px;
-  margin-top: 82px;
-  margin-left: 310px;
-  transform: rotate(15deg);
-  background-color: springgreen;
-  opacity: 0.6;
-  transition: 2s;
-}
-@for $i from 1 through 10 {
-  #P20171010 .stripe#stripe#{$i} {
-    margin-left: 275px - $i * 25;
+#P20171010 {
+  #rect1 {
+    z-index: 1;
   }
-  #P20171010 .stripe#stripe#{$i}:hover {
-    transform: rotate(180deg);
+  .stripe {
+    z-index: 4;
+  }
+
+  .frame {
+    position: relative;
+    width: 300px;
+    height: 375px;
+    margin: 50px auto;
+    background-color: $baseColor;
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
+    background: linear-gradient($baseColor, $secondaryColor);
+  }
+  .info {
+    width: 300px;
+  }
+
+  .rect,
+  .circle,
+  .line {
+    position: absolute;
+  }
+  .circle {
+    border-radius: 50%;
+  }
+  .circle#circle1 {
+    margin-top: 0;
+    margin-left: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    transition: 2.5s;
+  }
+  .circle#circle1:hover {
+    transform: translateX(-105px) translateY(240px);
+    background-color: mediumaquamarine;
+    z-index: 5;
+  }
+  .rect#rect1 {
+    width: 50px;
+    height: 50px;
+    margin-top: 280px;
+    margin-left: 115px;
+    background-color: rgba(256, 20, 20, 0.5);
+  }
+  .rect#rect2 {
+    width: 290px;
+    height: 163px;
+    margin-top: 105px;
+    margin-left: 5px;
+    background-color: rgba(10, 90, 256, 0.5);
+    transform: skew(0, 25deg);
+  }
+  .rect#rect3 {
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 220px solid rgb(10, 10, 115);
+    margin-top: 130px;
+    margin-left: 100px;
+    transform: rotate(25deg);
+  }
+  .rect#rect4 {
+    width: 0;
+    height: 0;
+    margin-top: 266px;
+    margin-left: 118px;
+    border-top: 5px solid transparent;
+    border-left: 51px solid rgb(100, 0, 75);
+    border-bottom: 18px solid transparent;
+    transform: rotate(20deg);
+  }
+  .stripe {
+    position: absolute;
+    width: 5px;
+    height: 275px;
+    margin-top: 82px;
+    margin-left: 310px;
+    transform: rotate(15deg);
+    background-color: springgreen;
+    opacity: 0.6;
+    transition: 2s;
+  }
+  @for $i from 1 through 10 {
+    .stripe#stripe#{$i} {
+      margin-left: 275px - $i * 25;
+    }
+    .stripe#stripe#{$i}:hover {
+      transform: rotate(180deg);
+    }
   }
 }

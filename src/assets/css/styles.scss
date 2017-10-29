@@ -1,3 +1,5 @@
+@import './normalize.css';
+$shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
 * {
   box-sizing: boder-box;
 }
@@ -15,37 +17,106 @@ body {
   font-size: 8em;
   margin: -75px 0 0 0;
   color: #eee;
-}
-.letter {
-  height: 250px;
-  transition: 0.2s ease-out;
+  .letter {
+    height: 250px;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      transform: translateY(75px);
+    }
+  }
 }
 
 @for $i from 1 through 15 {
   #letter-#{$i}:hover {
     color: hsl($i * 12, 95, 60);
-    transform: translateY(75px);
   }
 }
 
-footer .footer {
+header.header {
+  height: 102px;
+  margin-bottom: 200px;
+  background: rgb(40, 40, 128);
+  box-shadow: $shadow;
+  // border-bottom: 10px solid blue;
+  transition: 0.2s;
+
+  &:hover {
+    height: 150px;
+    margin-bottom: 152px;
+  }
+}
+
+.painting {
+  margin: 200px 0;
+}
+.painting:first-of-type {
+  margin: 0;
+}
+.info {
+  // width: 550px;
+  margin: 30px auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+}
+
+footer.footer {
   padding: 1em;
   display: flex;
   height: 70px;
   font-size: 3em;
   margin-top: 3em;
   flex-wrap: no-wrap;
-  color: rgb(175, 50, 50);
+  color: rgb(200, 50, 80);
   justify-content: space-around;
-  background-color: rgb(256, 25, 10);
+  background: rgb(150, 35, 5);
+  box-shadow: $shadow;
 
   .letter {
-    height: 50px;
-    transition: 0.2s;
+    height: 100px;
+    transition: 0.2s ease-out;
 
     &:hover {
       transform: translateY(-75px);
       color: rgba(10, 25, 256, 0.5);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header.header {
+    height: 65px;
+    margin-bottom: 100px;
+    &:hover {
+      height: 65px;
+      margin-bottom: 100px;
+    }
+  }
+  .title {
+    font-size: 2em;
+    margin: 0;
+
+    .letter {
+      margin-top: 10px;
+      height: 50px;
+
+      &:hover {
+        transform: translateY(0px);
+      }
+    }
+  }
+  .painting {
+    margin: 100px 0;
+  }
+  footer.footer {
+    height: 40px;
+    margin: 60px 0 0 0;
+    font-size: 1.5em;
+    .letter {
+      height: 40px;
+      &:hover {
+        transform: translateY(0px);
+      }
     }
   }
 }
