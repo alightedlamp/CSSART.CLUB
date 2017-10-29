@@ -4,10 +4,7 @@ import './assets/css/styles.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-// Paintings
-import P20171009 from './paintings/js/P20171009';
-import P20171010 from './paintings/js/P20171010';
-import P20171012 from './paintings/js/P20171012';
+import { paintings } from './paintings/paintings';
 
 class App extends Component {
   render() {
@@ -15,15 +12,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <section>
-          <div className="painting">
-            <P20171009 />
-          </div>
-          <div className="painting">
-            <P20171010 />
-          </div>
-          <div className="painting">
-            <P20171012 />
-          </div>
+          {paintings.map((painting, i) => (
+            <div className="painting" key={i}>
+              {React.createElement(painting)}
+            </div>
+          ))}
         </section>
         <Footer />
       </div>
