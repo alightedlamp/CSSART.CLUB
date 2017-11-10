@@ -1,5 +1,7 @@
 @import './normalize.css';
+
 $shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+
 * {
   box-sizing: boder-box;
 }
@@ -54,7 +56,6 @@ header.header {
   margin: 0;
 }
 .info {
-  // width: 550px;
   margin: 30px auto;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;

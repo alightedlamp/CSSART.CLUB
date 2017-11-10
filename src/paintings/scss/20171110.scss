@@ -1,0 +1,111 @@
+$paintingWidth: 400px;
+$paintingHeight: 723px;
+
+#P20171110 {
+  .frame {
+    position: relative;
+    margin: 0 auto;
+    width: $paintingWidth;
+    height: $paintingHeight;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  .info {
+    width: $paintingWidth;
+  }
+
+  .background {
+    position: absolute;
+    background: linear-gradient(45deg, lightblue, hotpink);
+    height: $paintingHeight;
+    width: $paintingWidth;
+  }
+  .middleground {
+    position: absolute;
+  }
+
+  .rect,
+  .circle {
+    position: absolute;
+  }
+  .circle {
+    border-radius: 50%;
+  }
+
+  #rect-group1 {
+    margin-left: 100px;
+  }
+
+  $x: 25;
+  $y: 50;
+
+  @for $i from 1 through 15 {
+    #rect#{$i} {
+      bottom: -50px + ($y * $i);
+      width: 72px;
+      height: 103px;
+      background: darken(lavender,  (2% * $i));
+      transition: 2s ease-out;
+
+      // z-index: 12 + $i;
+
+      &:hover {
+        transform: rotate(1080deg) translateX($paintingWidth - 72px);
+        background: orangered;
+      }
+    }
+  }
+
+  #circle-group1 {
+    top: 92px;
+    left: -100px;
+    transform: rotate(110deg);
+    position: absolute;
+  }
+
+  $y: $paintingHeight / 12;
+
+  @for $i from 1 through 12 {
+    #circle#{$i} {
+      bottom: 0px + ($y * $i);
+      width: $y;
+      height: $y;
+      background: darken(forestgreen,  (2% * $i));
+      transition: 1s ease;
+      opacity: 0.7;
+
+      &:hover {
+        transform: translateX(300px);
+      }
+    }
+  }
+
+  $x: 20;
+  $y: 10;
+
+  @for $i from 16 through 46 {
+    #rect#{$i} {
+      top: 145px + $i;
+      margin-right: 12px;
+      left: -120px + ($i * 12);
+      width: 7px;
+      height: 400px;
+      transition: 0.3s;
+      background: linear-gradient(goldenrod, lightsalmon);
+
+      &:hover {
+        height: 10px;
+        background: linear-gradient(darkviolet, mediumblue);
+      }
+    }
+  }
+
+  #rect47 {
+    left: 0;
+    top: 130px;
+    width: 360px;
+    height: 360px;
+    background: orangered;
+    z-index: 0;
+  }
+}
