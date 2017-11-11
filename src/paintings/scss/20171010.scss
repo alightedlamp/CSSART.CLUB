@@ -13,13 +13,9 @@ $secondaryColor: rgb(70, 10, 90);
     position: relative;
     width: 300px;
     height: 375px;
-    margin: 50px auto;
     background-color: $baseColor;
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
     background: linear-gradient($baseColor, $secondaryColor);
-  }
-  .info {
-    width: 300px;
   }
 
   .rect,

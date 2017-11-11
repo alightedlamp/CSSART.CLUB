@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../scss/20171110.scss';
+import '../css/20171110.css';
 
 class P20171110 extends Component {
   render() {

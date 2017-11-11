@@ -26,13 +26,9 @@ $frameHeight: 600px;
     position: relative;
     width: $frameWidth;
     height: $frameHeight;
-    margin: 50px auto;
     background-color: $baseColor;
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.3);
     background: linear-gradient($baseColor, darkgoldenrod);
-  }
-  .info {
-    width: 550px;
   }
   .rect {
     position: absolute;

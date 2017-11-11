@@ -11,10 +11,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <section>
+        <section className="paintings">
           {paintings.map((painting, i) => (
             <div className="painting" key={i}>
-              {React.createElement(painting)}
+              {React.createElement(painting.src)}
             </div>
           ))}
         </section>

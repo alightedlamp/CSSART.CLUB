@@ -9,23 +9,17 @@ html,
 body {
   margin: 0;
   padding: 0;
+  color: rgb(61, 61, 61);
   font-family: 'Roboto', sans-serif;
 }
 .title {
   padding: 0 1em;
   display: flex;
   flex-wrap: no-wrap;
-  justify-content: space-around;
-  font-size: 8em;
-  margin: -75px 0 0 0;
+  font-size: 4em;
   color: #eee;
   .letter {
-    height: 250px;
     transition: 0.2s ease-out;
-
-    &:hover {
-      transform: translateY(75px);
-    }
   }
 }
 
@@ -35,50 +29,44 @@ body {
   }
 }
 
-header.header {
-  height: 102px;
+header {
+  margin-top: 100px;
   margin-bottom: 200px;
-  background: rgb(40, 40, 128);
-  box-shadow: $shadow;
-  // border-bottom: 10px solid blue;
-  transition: 0.2s;
-
-  &:hover {
-    height: 150px;
-    margin-bottom: 152px;
-  }
 }
 
+.paintings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2em;
+}
 .painting {
-  margin: 200px 0;
+  margin: 100px 50px;
 }
 .painting:first-of-type {
   margin: 0;
 }
 .info {
   margin: 30px auto;
+  text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
+  letter-spacing: 3px;
 }
 
 footer.footer {
   padding: 1em;
   display: flex;
-  height: 70px;
+  height: 100px;
   font-size: 3em;
-  margin-top: 3em;
   flex-wrap: no-wrap;
   color: rgb(200, 50, 80);
-  justify-content: space-around;
-  background: rgb(150, 35, 5);
-  box-shadow: $shadow;
 
   .letter {
-    height: 100px;
     transition: 0.2s ease-out;
 
     &:hover {
-      transform: translateY(-75px);
       color: rgba(10, 25, 256, 0.5);
     }
   }
