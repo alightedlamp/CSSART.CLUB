@@ -1,6 +1,6 @@
 # CSS ART CLUB
 
-This is a showcase of 'CSS Paintings' which were made with HTML and Sass, then ported over to React for this gallery. The paintings are sublty interactive, in that they don't animate unless the user ineracts with them directly like they would a piece of UI on a functional website. This project is a fun way to blend my interest in painting with that of user-interface ineteraction and animation.
+This is a showcase of 'CSS Paintings' which were made with HTML and Sass and submitted to [CodePen](https://codepen.io/alightedlamp/pens/public/), then ported over to React for this gallery. The paintings are sublty interactive, in that they don't animate unless the user ineracts with them directly like they would a piece of UI on a functional website. This project is a fun way to blend my interest in painting with that of user-interface ineteraction and animation.
 
 ## Built with:
 
