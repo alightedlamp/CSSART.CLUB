@@ -13,6 +13,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://cssart.club",
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "gulp": "^3.9.1",

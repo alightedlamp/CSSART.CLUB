@@ -1,0 +1,179 @@
+#P20180203 {
+  $baseColor: rgba(10, 30, 250, 0.5);
+  $secondaryColor: rgba(75, 50, 125, 0.3);
+
+  $subColorBase: rgba(250, 50, 5, 1);
+  $subColorSecondary: rgba(225, 60, 15, 0.3);
+
+  .frame {
+    position: relative;
+    margin: 15% auto;
+    width: 600px;
+    height: 400px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  .rect,
+  .circle {
+    position: absolute;
+  }
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .background {
+    position: inherit;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(50, 5, 225, 0.9);
+  }
+
+  #group-1 {
+    margin-left: -50px;
+    transition: 2s;
+
+    &:hover {
+      transform: rotate(-30deg) translateY(100px) translateX(50px);
+    }
+
+    #fragment-1 {
+      position: absolute;
+      width: 250px;
+      margin-top: 50px;
+      margin-left: 100px;
+      height: 300px;
+      background-color: rgba(15, 5, 13, 0.5);
+      // transform: rotate(30deg);
+    }
+    #fragment-2 {
+      position: absolute;
+      left: 290px;
+      margin-top: 20px;
+      width: 100px;
+      height: 275px;
+      background-color: rgba(255, 15, 5, 0.6);
+
+      &:hover {
+        animation: 0.7s infinite rotate-box;
+      }
+    }
+    @keyframes rotate-box {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(90deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      75% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate(540deg);
+      }
+    }
+  }
+
+  #group-2 {
+    @for $i from 3 to 12 {
+      #fragment-#{$i} {
+        position: absolute;
+        transition: 0.75s;
+        width: 30px;
+        height: 30px;
+        margin-left: 50px * $i;
+        margin-top: 5px * $i;
+        background-color: rgb($i * 45, 50, 3);
+
+        &:hover {
+          background-color: rgb(3, 90, $i * 35);
+        }
+      }
+    }
+  }
+  #group-3 {
+    margin-left: 2px;
+    margin-top: 498px;
+    transform: rotate(-45deg);
+
+    @for $i from 13 to 26 {
+      #fragment-#{$i} {
+        transition: 4s;
+
+        // position: relative;
+        width: 20px;
+        height: 20px;
+        margin-left: 27px * $i;
+        background-color: rgba(50, 196, 225, 0.9);
+
+        &:hover {
+          margin-left: 33px * $i;
+        }
+      }
+      #fragment-22,
+      #fragment-23,
+      #fragment-24,
+      #fragment-25 {
+        background-color: rgba(60, 50, 100, 0.6);
+      }
+    }
+  }
+  #group-4 {
+    #fragment-26 {
+      transition: 0.5s;
+      position: absolute;
+      width: 178px;
+      height: 178px;
+      left: 290px;
+      top: 20px;
+      background-color: rgba(15, 30, 133, 0.8);
+
+      &:hover {
+        transform: translate(50px, 75px);
+      }
+    }
+    #fragment-27 {
+      position: absolute;
+      transition: 1.7s;
+      left: 418px;
+      top: 5px;
+      width: 74px;
+      height: 92px;
+      background-color: rgba(20, 90, 220, 0.6);
+
+      &:hover {
+        transform: translate(-400px, 220px);
+      }
+    }
+  }
+  #group-5 {
+    position: absolute;
+    left: -400px;
+
+    @for $i from 28 to 45 {
+      #fragment-#{$i} {
+        position: absolute;
+        margin-left: 15px * $i;
+        width: 10px;
+        height: 400px;
+        background-color: rgba(1 * $i, 1 * $i, 1 * $i, 0.5 + $i / 2);
+      }
+    }
+  }
+
+  #group-6 {
+    #fragment-45 {
+      position: absolute;
+      top: 300px;
+      left: 150px;
+      width: 100px;
+      height: 100px;
+      background: rgba(65, 55, 200, 0.75);
+    }
+  }
+}
