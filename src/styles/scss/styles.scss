@@ -14,10 +14,11 @@ body {
 
 a {
   text-decoration: none;
-  color: gray;
+  color: #5761ff;
+  font-weight: 600;
 
   &:hover {
-    border-bottom: 3px solid gray;
+    border-bottom: 3px solid #5761ff;
   }
 }
 
@@ -44,7 +45,7 @@ header {
 }
 
 .info-bar {
-  width: 700px;
+  max-width: 700px;
   color: rgba(0, 0, 0, 0.6);
   margin: 60px;
   line-height: 1.75em;
@@ -87,7 +88,8 @@ footer.footer a {
   height: 100px;
   font-size: 3em;
   flex-wrap: no-wrap;
-  color: rgb(200, 50, 80);
+  color: #eee;
+  font-weight: 300;
   text-decoration: none;
   .letter {
     transition: 0.2s ease-out;
@@ -117,15 +119,18 @@ footer.footer a {
       }
     }
   }
+  .info-bar {
+    font-size: 14px;
+  }
   .painting {
     margin: 100px 0;
   }
   footer.footer {
-    height: 40px;
+    height: 20px;
     margin: 60px 0 0 0;
-    font-size: 1.5em;
+    font-size: .6em;
     .letter {
-      height: 40px;
+      height: 20px;
       &:hover {
         transform: translateY(0px);
       }

@@ -18,10 +18,8 @@ class App extends Component {
             <em>Design as Art</em>, and which I read after having started work on this project.
           </p>
           <p>In the manner of  Bruno's machines, these CSS paintings serve as a bridge between art and
-            functional design by assuming the shape and life of an abstract
-            painting -- their visual characteristics and their interactive
-            characteristics through some subtle and at times frustrating
-            interactivity -- using the tools and language of the web.
+            functional design by assuming the shape and life of an abstract painting &mdash; their visual characteristics, as well as the interactive
+            through some subtle and at times frustrating interactivity &mdash; using the tools and languages of the web.
           </p>
           <p>
             They don't quite push what CSS can do, but I think
@@ -30,7 +28,10 @@ class App extends Component {
             a life of their own. Compupters can be and express things of beauty
             too, it turns out.
           </p>
-          <p>How paintings are made is very important to me; one of my greatest joys is deconstructing a painting in my mind. While likely not the prettiest code, in the spirit of reading a painting, the source files are found <a href="https://github.com/alightedlamp/CSSART.CLUB/tree/master/src/paintings">here</a>.</p>
+          <p>How paintings are made is very important to me; one of my greatest joys is deconstructing a painting in my mind. 
+            While likely not the prettiest code, in the spirit of reading a painting, the source files are found{' '}
+            <a href="https://github.com/alightedlamp/CSSART.CLUB/tree/master/src/paintings">here</a>.
+          </p>
         </div>
         <section className="paintings">
           {paintings.map((painting, i) => (
