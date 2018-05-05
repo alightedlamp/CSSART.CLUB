@@ -73,6 +73,12 @@ header {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
   letter-spacing: 3px;
+  max-width: 300px;
+}
+
+.info-title {
+  letter-spacing: 1px;
+  line-height: 1.5em;
 }
 
 footer.footer a {

@@ -30,7 +30,7 @@ class App extends Component {
             a life of their own. Compupters can be and express things of beauty
             too, it turns out.
           </p>
-          <p>The source files are found <a href="https://github.com/alightedlamp/CSSART.CLUB">here</a>.</p>
+          <p>How paintings are made is very important to me; one of my greatest joys is deconstructing a painting in my mind. While likely not the prettiest code, in the spirit of reading a painting, the source files are found <a href="https://github.com/alightedlamp/CSSART.CLUB/tree/master/src/paintings">here</a>.</p>
         </div>
         <section className="paintings">
           {paintings.map((painting, i) => (

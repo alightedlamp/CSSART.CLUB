@@ -1,0 +1,246 @@
+#P20180504 {
+    /* 
+        CSS Painting 2018-05-04
+        "Golfing Around Florida's Moons with Ellsworth
+        Kelly and Josef Albers"
+        by Philip Harrell
+
+        http://cssart.club
+        http://philipharrell.com
+    */
+
+    // Setup stuff
+    .container { 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+    }
+    
+    $painting-width: 520px;
+    $painting-height: 440px;
+    
+    .frame {
+        position: relative;
+        margin: 50px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    
+        // Painting's size
+        width: $painting-width;
+        height: $painting-height;
+    }
+    
+    // Base shapes
+    .rect,
+    .circle {
+        position: absolute;
+    }
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+    }
+    .group {
+        // position: relative;
+    }
+    
+    // Color vars
+    $green1: rgba(0, 199, 124, 1);
+    $green2: rgba(5, 235, 36, 0.61);
+    $blue1: rgba(36, 66, 235, 0.61);
+    
+    // Z-index placement values
+    #group-1 { z-index: 5; }
+    #group-2 { z-index: 2; }
+    #group-5 { z-index: 1; }
+        
+    // Painting
+    .frame {
+        background-color: $green1;
+    }
+    
+    $grass-height: 50px;
+    $grass-width: 20px;
+    $grass-color: $green2;
+    
+    .grass {
+        background: $green2;
+        width: $grass-width;
+        height: $grass-height;
+        bottom: 0;
+        left: -20px;
+        // transform: rotate(10deg);
+        
+        transition: .1s;
+        
+        border-top-left-radius: 100%;
+        
+        &:hover {
+        background: black;
+        // transform: rotate(-10deg);
+        }
+    }
+    
+    @for $i from 0 to 28 {
+        $grass-height: $grass-height + 10;
+        $grass-color: darken($grass-color, 1%);
+        $grass-width: $grass-width - .5;
+        
+        #frag-#{$i}.grass {
+        margin-left: 20px + (($i - 1) * 20);
+        height: $grass-height;
+        width: $grass-width;
+        background: $grass-color;
+    
+        &:hover {
+            background: lighten(blue, $i + 5);
+            transform: skew(10deg);
+        }
+        }
+    }
+    
+    // Blue rectanges
+    
+    #group-2 {
+        // transform: rotate(-30deg);
+    }
+    
+    $block-gutter: 45px;
+    $light-blue-block-bg: rgba($blue1, .3);
+    $dark-blue-block-bg: darken($blue1, 10%);
+    
+    #frag-27,
+    #frag-28 {
+        width: ($painting-width / 2) - $block-gutter;
+        height: $painting-height / 2;
+        transition: 3s;
+    }
+    
+    #frag-27 {
+        top: 50px;
+        left: $block-gutter;
+        
+        background: $light-blue-block-bg;
+        
+        &:hover {
+        background: $dark-blue-block-bg;
+        transform: rotate(-32deg);
+        }
+    }
+    #frag-28 {
+        top: 50px;
+        right: $block-gutter;
+        
+        background: $dark-blue-block-bg;
+        
+        &:hover {
+        background: $light-blue-block-bg;
+        transform: rotate(30deg);
+        }
+    }
+    
+    // Some circles to balance it out.
+    @for $i from 29 to 33 {
+        #frag-#{$i} {
+        width: 50px;
+        height: 50px;
+        }
+    }
+    
+    // Leave the first one in the top right as a joke about laziness. This is art, afterall.
+    #frag-29 {
+        background: yellow;
+        
+        // I don't think a 10s hover can ever finish, good luck.
+        transition: 10s;
+        
+        &:hover {
+        margin-left: $painting-width - 50px;
+        }
+    }
+    
+    #frag-30 {
+        left: $painting-width / 4;
+        top: $painting-height / 2;
+        
+        background: rgba(lighten($green1, 30%), .5);
+        
+        transition: 2s;
+        
+        &:hover {
+        top: $painting-height / 4;
+        background: $dark-blue-block-bg;
+        }
+    }
+    
+    #frag-31 {
+        right: $painting-width / 4;
+        top: $painting-height / 4 + 25px;
+        
+        background: rgba(darken($green1, 30%), .5);
+        
+        transition: 5s;
+        
+        &:hover {
+        background: $light-blue-block-bg;
+        }
+    }
+    
+    #frag-32 {
+        top: 0;
+        right: 0;
+        background: rgba(darken(yellow, 25%), .3);
+        
+        transition: 10s;
+        
+        &:hover {
+        margin-top: $painting-height - 50px;
+        }
+    }
+    
+    // A rectangle of 3's, because it's fragment 33
+    #frag-33 {
+        width: 33px;
+        height: 333px;
+        
+        // I had to break the rule here for pixel alignment, sue me
+        left: ($painting-width / 3) + 3 + 3 - 1;
+        top: 33px;
+        
+        background-image: linear-gradient(180deg, #333, #111);
+        // border-radius: 10px 100px / 120px;
+        // box-shadow: 3px 3px 0 rgba(50, 67, 255, .9);
+        
+        transform: rotate(-33deg);
+        transition: .5s;
+        
+        &:hover {
+        transform: rotate(900deg) translateX(-1px);
+        top: 0;
+        height: $painting-height;
+        border-radius: 0;
+        box-shadow: none;
+        }
+    }
+    
+    #frag-34 {
+        width: ($painting-width / 3) + 7;
+        height: $painting-height;
+        
+        background-image: linear-gradient(90deg, rgba(5, 9, 16, .9), rgba(5, 9, 16, 1));
+    }
+    #frag-35 {
+        left: ($painting-width / 3) + 7;
+        width: ($painting-width / 3) + 7;
+        height: $painting-height;
+        
+        background-image: linear-gradient(90deg, rgba(5, 9, 255, 1), rgba(5, 9, 16, 0));
+    }
+    
+    #frag-36 {
+        left: ($painting-width / 1.5) - 6;
+        width: ($painting-width / 10) - 3;
+        height: $painting-height;
+        
+        background-image: linear-gradient(50deg, rgba(175, 50, 20, .9), rgba(250, 50, 20, .9))
+    }
+}

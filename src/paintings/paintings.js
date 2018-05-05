@@ -3,8 +3,13 @@ import P20171010 from './js/P20171010';
 import P20171012 from './js/P20171012';
 import P20171110 from './js/P20171110';
 import P20180203 from './js/P20180203';
+import P20180504 from './js/P20180504';
 
 export const paintings = [
+  {
+    src: P20180504,
+    date: '2018/05/04'
+  },
   {
     src: P20180203,
     date: '2018/02/03'
