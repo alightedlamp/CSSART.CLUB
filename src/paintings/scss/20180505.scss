@@ -1,0 +1,213 @@
+/*//////////////////////////////////
+////////////////////////////////////
+
+Title: LaLa's
+Date: 2018/05/05
+
+////////////////////////////////////
+//////////////////////////////////*/
+#P20180505 {
+    .container { 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+    }
+    
+    $painting-width: 430px;
+    $painting-height: 700px;
+    $painting-bg: rgba(250, 30, 75, 1);
+    
+    .frame {
+        position: relative;
+        margin: 50px;
+        overflow: hidden;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    
+        width: $painting-width;
+        height: $painting-height;
+        
+        background-image: linear-gradient(45deg, $painting-bg, adjust-hue($painting-bg, 40%));
+        
+        display: grid;
+    }
+    
+    
+    // Basic Shapes
+    
+    .rect,
+    .circle {
+        position: absolute;
+    }
+    .circle {
+        border-radius: 50%;
+    }
+    
+    
+    // Positioning
+    
+    .group { position: absolute; }
+    
+    #group-1 { z-index: 4; } // Falling Rectangle
+    #group-2 { z-index: 3; } // Blinds
+    #group-3 { z-index: 2; } // Sun
+    #group-4 { z-index: 1; } // Ground
+    #group-5 { z-index: 5; }
+    
+    
+    // Colors
+    
+    $color1: rgba(200, 25, 50, .4);
+    $color2: blue;
+    $color3: yellow;
+    
+    
+    ////////////////////////////////////
+    ////////////////////////////////////
+    
+    // Group 1
+    #frag-1 {
+        top: 251px;
+        left: ($painting-width / 4) - 20;
+        
+        height: 0px;
+        width: 0px;
+        
+        border-right: 252px solid rgba($color1, 1);
+        border-bottom: 250px solid rgba(230, 40, 0, .7);
+        box-shadow: 50px 50px 0 rgb(250, 115, 25);
+        // background-image: linear-gradient(90deg, red, rgba(0, 0, 250, .7));
+        
+        transform:
+        rotate(180deg)
+        skew(5deg);
+        transition: 3s;
+        
+        &:hover {
+        transform: translate(25px, 100px);
+        }
+    }
+    
+    // Group 2
+    #group-2 {
+        $g2-bg: $color2;
+        opacity: .4;
+        
+        top: -75px;
+        left: 50px;
+        height: $painting-height;
+        
+        .light {
+        width: $painting-width - 100px;
+        height: 10px;
+        
+        background: $g2-bg;
+        }
+        
+        @for $i from 2 to 145 {
+        $g2-bg: lighten($g2-bg, .2%);
+        
+        #frag-#{$i} {
+            margin-left: 1px + ($i * 1);
+            margin-top: 1px + ($i * 12);
+            
+            background: $g2-bg;
+            
+            transition: .5s;
+            
+            &:hover {
+            background: adjust-hue($g2-bg, 20%);
+            height: 100px;
+            transform: 
+                skew(45deg)
+                translate($painting-width / 3, -100px)
+                rotate(360deg);
+            }
+        }
+        }
+    }
+    
+    // Sun
+    #group-3 {
+        #frag-146 {
+        width: 400px;
+        height: 400px;
+        
+        top: ($painting-height / 2) - 200;
+        
+        background: darken(adjust-hue($color3, -30%), 10%);
+        opacity: .3;
+    
+        transition: .3s;
+        
+        &:hover {
+            background: black;
+            margin-top: -100px;
+        }
+        }
+    }
+    
+    #group-4 {
+        #frag-147 {
+        width: $painting-width - 50px;
+        height: 300px;
+        
+        top: $painting-height - 300px;
+        left: 25px;
+        
+        background: rgba(25, 25, 30, 1);
+        
+        transform: skew(30deg);
+        }
+    }
+    
+    #group-5 {
+        $circle-light-bg: rgba(233, 107, 244, 0.76);
+        top: -150px;
+        left: 150px;
+        
+        width: 200px;
+        height: 300px;
+        
+        display: flex;
+        flex-wrap: wrap;
+        
+        .circle-lights {
+        position: relative;
+        
+        width: 25px;
+        height: 25px;
+        
+        background: $circle-light-bg;
+        
+        transition: 1.3s;
+        }
+        
+        $top: 125px;
+        $left: 25px;
+        
+        @for $i from 148 to 300 {
+        $circle-light-bg: lighten($circle-light-bg, .2%);
+        
+        @if $i % 2 == 0 {
+            $top: ($top - 10px);
+            $left: ($left - 15px);
+        } @else {
+            $top: $top + 30px;
+            $left: $left + 15px;
+        }
+        
+        #frag-#{$i} {
+            left: $left;
+            top: $top;
+            
+            background: $circle-light-bg;
+            
+            &:hover {
+            background: darken($circle-light-bg, 30%);
+            left: 50px;
+            }
+        }
+        }
+    }
+}

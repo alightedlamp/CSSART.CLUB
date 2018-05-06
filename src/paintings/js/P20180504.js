@@ -55,7 +55,7 @@ class P20180504 extends Component {
         </div>
         <div className="info">
           <p>2018/05/04</p>
-          <p className="info-title">Golfing Around Florida's Moons with Ellsworth Kelly and Josef Albers</p>
+          <p className="info-title"><em>Golfing Around Florida&rsquo;s Moons with Ellsworth Kelly and Josef Albers</em></p>
         </div>
       </div>
     );
