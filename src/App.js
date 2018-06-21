@@ -25,7 +25,7 @@ class App extends Component {
             They don't quite push what CSS can do, but I think
             point out some of it's foibles, which is a central theme to much of my work. Most of the images here have a
             &lsquo;sweet spot&rsquo; or two where if you let your mouse sit, they'll take on
-            a life of their own. Compupters can be and express things of beauty
+            a life of their own. Computers can be and express things of beauty
             too, it turns out.
           </p>
           <p>How paintings are made is very important to me; one of my greatest joys is deconstructing a painting in my mind. 
